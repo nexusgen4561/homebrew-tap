@@ -1,8 +1,8 @@
 class ClaudeUsageBar < Formula
   desc "Menu bar widget for Claude usage limits"
   homepage "https://github.com/nexusgen4561/claude-usage-bar"
-  url "https://github.com/nexusgen4561/claude-usage-bar/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "6950e04dbcda37fe09af4610f9206f97feaaa1251bbf9c97102d57afc88e23e6"
+  url "https://github.com/nexusgen4561/claude-usage-bar/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "19717562b90171913e717c737ac312e4627d75475134e0dda2c8a0eeda0b8521"
   license "MIT"
   head "https://github.com/nexusgen4561/claude-usage-bar.git", branch: "main"
 
@@ -31,9 +31,11 @@ class ClaudeUsageBar < Formula
       Launchpad, link the bundle into your Applications folder:
         ln -sfn "#{opt_prefix}/Claude Usage.app" ~/Applications/
 
-      It reads your existing Claude Code session, so run `claude` and sign in
-      first if you have not already. Use "Launch at login" in its menu to start
-      it automatically.
+      It reads your existing Claude Code session. If you have not signed in yet,
+      run `claude` in a terminal and then `/login` — starting `claude` on its own
+      does not sign you in.
+
+      Use "Launch at login" in the widget's menu to start it automatically.
     EOS
   end
 
