@@ -1,8 +1,8 @@
 class ClaudeUsageBar < Formula
   desc "Menu bar widget for Claude usage limits"
   homepage "https://github.com/nexusgen4561/claude-usage-bar"
-  url "https://github.com/nexusgen4561/claude-usage-bar/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "19717562b90171913e717c737ac312e4627d75475134e0dda2c8a0eeda0b8521"
+  url "https://github.com/nexusgen4561/claude-usage-bar/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "63e00f48386b6bcb987caf8d1f68fa84dbb9b636c9825126d541d99eda852620"
   license "MIT"
   head "https://github.com/nexusgen4561/claude-usage-bar.git", branch: "main"
 
