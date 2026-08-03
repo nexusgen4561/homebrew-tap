@@ -1,8 +1,8 @@
 class ClaudeUsageBar < Formula
   desc "Menu bar widget for Claude usage limits"
   homepage "https://github.com/nexusgen4561/claude-usage-bar"
-  url "https://github.com/nexusgen4561/claude-usage-bar/archive/refs/tags/v1.1.1.tar.gz"
-  sha256 "fbe45daaf2f340bcacfdb29f658ed0fbd711a66330ac10f9ceafd363f478f5ad"
+  url "https://github.com/nexusgen4561/claude-usage-bar/archive/refs/tags/v1.1.2.tar.gz"
+  sha256 "00a9117f379651a768b209d08f3718d7c0a04b41fed0707ffcaa042121188071"
   license "MIT"
   head "https://github.com/nexusgen4561/claude-usage-bar.git", branch: "main"
 
@@ -12,6 +12,8 @@ class ClaudeUsageBar < Formula
     # build.sh assembles the bundle wherever APP_DIR points, so aim it at the
     # build directory and hand the finished bundle to the Cellar.
     ENV["APP_DIR"] = buildpath
+    # A release tarball carries no .git, so build.sh cannot read a tag itself.
+    ENV["VERSION"] = version.to_s
     system "./build.sh"
     prefix.install "Claude Usage.app"
 
@@ -40,7 +42,13 @@ class ClaudeUsageBar < Formula
   end
 
   test do
-    assert_predicate prefix/"Claude Usage.app/Contents/MacOS/ClaudeUsageBar", :executable?
-    assert_match "Claude Usage", (prefix/"Claude Usage.app/Contents/Info.plist").read
+    bundle = prefix/"Claude Usage.app"
+    assert_predicate bundle/"Contents/MacOS/ClaudeUsageBar", :executable?
+    assert_match "Claude Usage", (bundle/"Contents/Info.plist").read
+
+    # Guards against the bundle silently falling back to its dev placeholder,
+    # which is what happens when build.sh cannot determine a version.
+    plist_cmd = "/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString'"
+    assert_equal version.to_s, shell_output("#{plist_cmd} '#{bundle}/Contents/Info.plist'").strip
   end
 end
