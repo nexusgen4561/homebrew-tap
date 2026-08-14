@@ -1,8 +1,8 @@
 class Aznable < Formula
   desc "Char Aznable-themed Dynamic Island for the MacBook notch"
   homepage "https://github.com/nexusgen4561/aznable"
-  url "https://github.com/nexusgen4561/aznable/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "598fbb8efe7a3b5fe8cdbe11228ffc018e30f5908b6f0a9ee5d55338700e8a81"
+  url "https://github.com/nexusgen4561/aznable/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "a2273ae7c3b971751e97d292d8acede8f0fb257d1d5019cf10570a768e5b1009"
   license "MIT"
   head "https://github.com/nexusgen4561/aznable.git", branch: "main"
 
