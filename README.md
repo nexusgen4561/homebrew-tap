@@ -4,11 +4,13 @@ Homebrew tap.
 
 ```bash
 brew install nexusgen4561/tap/claude-usage-bar
+brew install nexusgen4561/tap/aznable
 ```
 
 | Formula | What it is |
 | --- | --- |
 | [`claude-usage-bar`](Formula/claude-usage-bar.rb) | macOS menu bar widget for Claude usage limits — [repo](https://github.com/nexusgen4561/claude-usage-bar) |
+| [`aznable`](Formula/aznable.rb) | Char Aznable–themed Dynamic Island for the MacBook notch — [repo](https://github.com/nexusgen4561/aznable) |
 
 ## Releasing a new version
 
