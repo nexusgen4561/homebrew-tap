@@ -1,8 +1,8 @@
 class Shinobu < Formula
   desc "Wisteria-violet Dynamic Island for the MacBook notch"
   homepage "https://github.com/nexusgen4561/shinobu"
-  url "https://github.com/nexusgen4561/shinobu/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "95e7c7e3837168e863342d5028d3c85f6c5bc328379f24c23e49d3a13fefeec3"
+  url "https://github.com/nexusgen4561/shinobu/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "06bafe62e5312be2b1d6effc377291eef1937972ebcdf4dde57c065786e9a15c"
   license "MIT"
   head "https://github.com/nexusgen4561/shinobu.git", branch: "main"
 
