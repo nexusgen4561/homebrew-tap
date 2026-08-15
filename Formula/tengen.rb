@@ -1,8 +1,8 @@
 class Tengen < Formula
   desc "Festival-carmine Dynamic Island for the MacBook notch"
   homepage "https://github.com/nexusgen4561/tengen"
-  url "https://github.com/nexusgen4561/tengen/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "6ec4d50366f545cb9d9730e5b53e15c5a7b9b84ccf7aae392c96ee425fa8ef75"
+  url "https://github.com/nexusgen4561/tengen/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "edb6c14232a339bfe0af22e294642ecd91ac785125630da5c1ec4e614940d9c6"
   license "MIT"
   head "https://github.com/nexusgen4561/tengen.git", branch: "main"
 
